@@ -39,7 +39,7 @@ class Housie
       start_range, end_range = get_range(col)
 
       # since numbers are sorted in a column therefore sorting and reversing the selection
-      ticket_numbers = (start_range..end_range).to_a.sample(@columns).sort.reverse
+      ticket_numbers = (start_range..end_range).to_a.sample(3).sort.reverse
 
       @rows.times { |row| @ticket[row][col] = ticket_numbers.pop unless @ticket[row][col].nil? }
     end
